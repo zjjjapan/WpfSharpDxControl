@@ -42,13 +42,13 @@ namespace WpfSharpDxControl
 			InternalInitialize();
 
 			Rendering = true;
-			CompositionTarget.Rendering += OnCompositionTargetRendering;
+			//CompositionTarget.Rendering += OnCompositionTargetRendering;
 		}
 
 		protected override sealed void Uninitialize()
 		{
 			Rendering = false;
-			CompositionTarget.Rendering -= OnCompositionTargetRendering;
+			//CompositionTarget.Rendering -= OnCompositionTargetRendering;
 
 			InternalUninitialize();
 		}
@@ -59,7 +59,7 @@ namespace WpfSharpDxControl
             InternalInitialize();
         }
 
-		private void OnCompositionTargetRendering(object sender, EventArgs eventArgs)
+		public void OnCompositionTargetRendering(object sender, EventArgs eventArgs)
 		{
 			if (!Rendering)
 				return;

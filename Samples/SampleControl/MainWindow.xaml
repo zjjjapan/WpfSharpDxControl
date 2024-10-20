@@ -11,7 +11,7 @@
 		<Label Content="The DirectX content is wrapped in a control which has its own Hwnd."></Label>
 		<Label Content="So you can have directX content amongst your wpf content."></Label>
 
-        <ContentControl Content="{Binding Content}" Margin="50" Height="100"></ContentControl>
+        <ContentControl Content="{Binding Sample2DRendererContent}" Margin="50" Height="100"></ContentControl>
 		<Label Content="Probably not gonna be able to have WPF ontop of DirectX."></Label>
         <Button Content="ToggleButton" Click="Button_Click"/>
     </StackPanel>

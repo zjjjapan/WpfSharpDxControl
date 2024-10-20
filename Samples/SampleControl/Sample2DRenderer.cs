@@ -34,7 +34,7 @@ namespace SampleControl
 		{
 			UpdatePosition();
 
-			RenderTarget2D.Clear(new Color(1.0f, 0, 1.0f));
+			RenderTarget2D.Clear(new Color(1.0f, 1.0f, 1.0f));
 			RenderTarget2D.FillEllipse(new Ellipse(_position, 20, 20), _circleColor);
 		}
 

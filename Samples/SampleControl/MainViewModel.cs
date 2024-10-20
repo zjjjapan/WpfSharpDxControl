@@ -11,8 +11,8 @@ namespace SampleControl
 {
     class MainViewModel : INotifyPropertyChanged
     {
-        private object content;
-        public object Content
+        private Sample2DRenderer content;
+        public Sample2DRenderer Sample2DRendererContent
         {
             get
             {

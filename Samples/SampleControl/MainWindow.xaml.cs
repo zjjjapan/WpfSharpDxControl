@@ -26,7 +26,7 @@ namespace SampleControl
 		{
             vm = new MainViewModel
             {
-                Content = new Sample2DRenderer()
+                Sample2DRendererContent = new Sample2DRenderer()
             };
 
 			InitializeComponent();
@@ -34,15 +34,17 @@ namespace SampleControl
             DataContext = vm;
 		}
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Button_Click(object sender, RoutedEventArgs e)
         {
-            Dispatcher.Invoke(() =>
-                {
-                    if (vm.Content is Sample2DRenderer)
-                        vm.Content = new Image();
-                    else
-                        vm.Content = new Sample2DRenderer();
-                });
+            vm.Sample2DRendererContent.OnCompositionTargetRendering(null, null);
+
+            //Dispatcher.Invoke(() =>
+            //    {
+            //        if (vm.Content is Sample2DRenderer)
+            //            vm.Content = new Image();
+            //        else
+            //            vm.Content = new Sample2DRenderer();
+            //    });
         }
 	}
 }
